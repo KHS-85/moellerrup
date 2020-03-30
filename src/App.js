@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import NotFound from './pages/NotFound';
+import Header from './components/Layout/Header/Header';
+import Home from './pages/Home';
+import Booking from './pages/Booking'
+import Kontakt from './pages/Kontakt'
+import Virksomheder from './pages/Virksomheder'
+import Møllerup from './components/Layout/Historie/Møllerup'
+import Arrangementer from './pages/Arrangementer'
+import Footer from './pages/Footer';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/Booking" component={Booking} />
+          <Route path="/Kontakt" component={Kontakt} />
+          <Route path="/Virksomheder" component={Virksomheder} />
+          <Route path="/Arrangementer" component={Arrangementer} />
+          <Route path="/Møllerup" component={Møllerup} />
+          <Route component={NotFound} />
+        </Switch>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

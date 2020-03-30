@@ -1,0 +1,30 @@
+@import '../../../../GlobalStyles/variables';
+//used variables : $linkcolor, $linkactivecolor
+
+.navbar_link{
+    color: $linkcolor;
+    text-decoration: none;
+}
+
+.navbar_link:hover{
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+}
+
+.navbar_link--active{
+    color: $linkactivecolor;
+}
+
+li{
+    margin-right: 25px;
+    font-size: 16px;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+.mollerup-logo {
+    width: 80px;
+    height: auto;
+}

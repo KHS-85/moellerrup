@@ -1,0 +1,56 @@
+
+body {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.welcome {
+  background-color: #A89E8E ;
+  outline: #605C4D 2.5px solid;
+}
+
+// Remove ugly outline around Bootstrap 4 navbar button
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+// Make standark Bootstrap 4 carousel indicators round instead of square
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+// Add black color overlay to carousel images for better contrast
+.carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(107, 98, 88, 0.2);
+}
+
+.Footer-Element {
+  background-color: rgb(151, 143, 131);
+  color: white;
+}
+
+.footer-list {
+  list-style: none;
+  line-height: 2.2rem;
+}
+
+.footer-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.newsletter-box {
+  max-width: 458px;
+    button {
+      max-width: 100px;
+    }
+}
